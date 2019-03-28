@@ -1,0 +1,10 @@
+# ServerInfo.ini > [Server1] > PORT0
+LOGIN_PORT=7384
+
+# ServerInfo.ini > [Server0] > PORT0
+SERVER_PORT=3731
+
+# HOST_MYSQL_PORT=3306
+
+RESTART=always
+

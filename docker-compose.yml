@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  # Game server
+  game_server:
+    build:
+      context: ./game_server
+      dockerfile: Dockerfile-centos
+    image: "darkhades/tlbb-game_server:centos"
+    volumes:
+      - ./workspace:/home/tlbb:cached
+    ports:
+      - "${LOGIN_PORT}:${LOGIN_PORT}"
+      - "${SERVER_PORT}:${SERVER_PORT}"
+    restart: ${RESTART}
+    links:
+      - tlbbdb
+      - webdb
+
+  # Game database
+  tlbbdb:
+    build:
+      context: ./tlbbdb
+    volumes:
+      - ./tlbbdb/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "tlbb1234"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "tlbbdb"
+    restart: ${RESTART}
+
+  # Web database
+  webdb:
+    build:
+      context: ./webdb
+    volumes:
+      - ./webdb/mysql:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "tlbb1234"
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: "webdb"
+    restart: ${RESTART}
+
+  # Billing
+
