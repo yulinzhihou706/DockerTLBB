@@ -1,4 +1,6 @@
 .gitattributes text eol=lf
+docker-compose.yml text eol=lf
+
 *.sh text eol=lf
 scripts/run text eol=lf
 scripts/stop text eol=lf

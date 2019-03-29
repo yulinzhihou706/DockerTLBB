@@ -22,8 +22,8 @@ services:
     build:
       context: ./tlbbdb
     image: tlbb/tlbbdb:latest
-    volumes:
-      - ./tlbbdb/mysql:/var/lib/mysql
+    # volumes:
+      # - ./tlbbdb/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: "tlbb1234"
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
@@ -35,8 +35,8 @@ services:
     build:
       context: ./webdb
     image: tlbb/webdb:latest
-    volumes:
-      - ./webdb/mysql:/var/lib/mysql
+    # volumes:
+      # - ./webdb/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: "tlbb1234"
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
