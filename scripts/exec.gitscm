@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+SCRIPT_NAME=$0
+DIR=$(dirname ${SCRIPT_NAME})
+
+winpty docker-compose exec $1 bash
+

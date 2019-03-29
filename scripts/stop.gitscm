@@ -5,4 +5,5 @@ DIR=$(dirname ${SCRIPT_NAME})
 
 cd ${DIR}/..
 winpty docker-compose exec game_server ./stop.sh
+docker-compose restart game_server
 

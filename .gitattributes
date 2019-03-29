@@ -1,5 +1,5 @@
+.gitattributes text eol=lf
 *.sh text eol=lf
 scripts/run text eol=lf
-scripts/run.gitscm text eol=lf
 scripts/stop text eol=lf
-scripts/stop.gitscm text eol=lf
+scripts/*.gitscm text eol=lf
