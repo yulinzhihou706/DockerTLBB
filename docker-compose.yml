@@ -5,10 +5,10 @@ services:
   game_server:
     build:
       context: ./game_server
-      dockerfile: Dockerfile-centos
-    image: "darkhades/tlbb-game_server:centos"
+      dockerfile: Dockerfile.centos
+    image: "darkhades/tlbb/game_server:centos"
     volumes:
-      - ./workspace:/home/tlbb:cached
+      - ./workspace:/home/tlbb
     ports:
       - "${LOGIN_PORT}:${LOGIN_PORT}"
       - "${SERVER_PORT}:${SERVER_PORT}"
