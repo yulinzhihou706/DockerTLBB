@@ -8,11 +8,13 @@ It will auto install and optimize for you
 
 1. Clone this project to anywhere in your PC/System
 
-2. Open `env-example` and edit those settings
-- LOGIN_PORT: Port for client login. Must be same as value you set in `ServerInfo.ini > [Server1] > PORT0`
-- SERVER_PORT: Port for client login. Must be same as value you set in `ServerInfo.ini > [Server1] > PORT0`
+2. Rename `env-example` to `.env`
 
-3. Rename `env-example` to `.env`
+3. Open `.env` and edit those settings
+
+- LOGIN_PORT: Port for client login. Must be same as value you set in `ServerInfo.ini > [Server1] > PORT0`
+
+- SERVER_PORT: Port for client login. Must be same as value you set in `ServerInfo.ini > [Server1] > PORT0`
 
 4. 
 
