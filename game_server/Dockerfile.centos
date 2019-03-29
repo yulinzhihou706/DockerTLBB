@@ -2,7 +2,7 @@ FROM centos:6.8
 
 WORKDIR /home/tlbb
 
-RUN yum clean all && yum update && yum check
+RUN yum clean all && yum update -y && yum check
 
 RUN yum install -y libstdc++.i686 unixODBC.i686
 RUN ln -s /usr/lib/libodbc.so /usr/lib/libodbc.so.1
