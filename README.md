@@ -14,3 +14,5 @@ It will auto install and optimize for you
 
 3. Rename `env-example` to `.env`
 
+4. 
+
