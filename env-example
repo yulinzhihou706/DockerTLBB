@@ -1,3 +1,6 @@
+# Path of /home/tlbb in host OS
+HOST_TLBB_FOLDER_PATH=//DockerTLBB/workspace
+
 # ServerInfo.ini > [Server1] > PORT0
 LOGIN_PORT=7384
 
