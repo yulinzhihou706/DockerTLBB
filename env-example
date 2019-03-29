@@ -1,18 +1,18 @@
 ###################################
-# Path of /home/tlbb in host OS
+# Path shared in host OS
 #
 # Window Host OS:
 # (+) Docker ToolBox:
 # Settings of docker-machine VirtualBox Image (default) -> Shared Folders
 # -> Add -> Host OS Path -> DockerTLBB -> Auto-mount -> OK
 # The env will be:
-# HOST_TLBB_FOLDER_PATH=//DockerTLBB/workspace
+# SHARED_DIR=/DockerTLBB
 #
 # Linux Host OS:
-# HOST_TLBB_FOLDER_PATH=./workspace
+# SHARED_DIR=.
 #
 ###################################
-HOST_TLBB_FOLDER_PATH=/DockerTLBB/workspace
+SHARED_DIR=/DockerTLBB
 
 # ServerInfo.ini > [Server1] > PORT0
 LOGIN_PORT=7384

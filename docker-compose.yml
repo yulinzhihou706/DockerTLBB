@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile.centos
     image: tlbb/game_server:centos
     volumes:
-      - ${HOST_TLBB_FOLDER_PATH}:/home/tlbb
+      - ${SHARED_DIR}:/home/tlbb
     ports:
       - "${LOGIN_PORT}:${LOGIN_PORT}"
       - "${SERVER_PORT}:${SERVER_PORT}"
@@ -22,8 +22,8 @@ services:
     build:
       context: ./tlbbdb
     image: tlbb/tlbbdb:latest
-    # volumes:
-      # - ./tlbbdb/mysql:/var/lib/mysql
+    volumes:
+      - ${SHARED_DIR}/tlbbdb/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: "tlbb1234"
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
@@ -35,8 +35,8 @@ services:
     build:
       context: ./webdb
     image: tlbb/webdb:latest
-    # volumes:
-      # - ./webdb/mysql:/var/lib/mysql
+    volumes:
+      - ${SHARED_DIR}/webdb/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: "tlbb1234"
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
