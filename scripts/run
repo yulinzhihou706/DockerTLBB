@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
-echo $(pwd)
+SCRIPT_NAME=$0
+DIR=$(dirname ${SCRIPT_NAME})
 
-cd ..
-# docker-compose exec game_server ./run.sh
+cd ${DIR}/..
+docker-compose exec game_server ./run.sh
 

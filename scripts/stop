@@ -1,2 +1,8 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
+
+SCRIPT_NAME=$0
+DIR=$(dirname ${SCRIPT_NAME})
+
+cd ${DIR}/..
+docker-compose exec game_server ./stop.sh
 
