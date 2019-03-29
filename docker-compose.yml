@@ -6,7 +6,7 @@ services:
     build:
       context: ./game_server
       dockerfile: Dockerfile.centos
-    image: "darkhades/tlbb/game_server:centos"
+    image: "tlbb/game_server:centos"
     volumes:
       - ${HOST_TLBB_FOLDER_PATH}:/home/tlbb
     ports:
@@ -21,6 +21,7 @@ services:
   tlbbdb:
     build:
       context: ./tlbbdb
+    image: "tlbb/tlbbdb:latest"
     volumes:
       - ./tlbbdb/mysql:/var/lib/mysql
     environment:
@@ -33,6 +34,7 @@ services:
   webdb:
     build:
       context: ./webdb
+    image: "tlbb/webdb:latest"
     volumes:
       - ./webdb/mysql:/var/lib/mysql
     environment:
