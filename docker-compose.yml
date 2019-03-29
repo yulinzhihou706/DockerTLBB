@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile.centos
     image: tlbb/game_server:centos
     volumes:
-      - ${SHARED_DIR}:/home/tlbb
+      - ${SHARED_DIR}/workspace:/home/tlbb
     ports:
       - "${LOGIN_PORT}:${LOGIN_PORT}"
       - "${SERVER_PORT}:${SERVER_PORT}"
@@ -40,7 +40,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: "tlbb1234"
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
-      MYSQL_DATABASE: "webdb"
+      MYSQL_DATABASE: "web"
     restart: ${RESTART}
 
   # Billing

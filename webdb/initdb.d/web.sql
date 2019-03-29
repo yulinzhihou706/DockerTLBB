@@ -15,3 +15,4 @@ CREATE TABLE account (
 INSERT INTO account(name, password) VALUES ('1', 'c4ca4238a0b923820dcc509a6f75849b'); -- 1/1
 INSERT INTO account(name, password) VALUES ('2', 'c4ca4238a0b923820dcc509a6f75849b'); -- 2/1
 INSERT INTO account(name, password) VALUES ('3', 'c4ca4238a0b923820dcc509a6f75849b'); -- 3/1
+INSERT INTO account(name, password) VALUES ('dark.hades', 'c4ca4238a0b923820dcc509a6f75849b'); -- dark.hades/1
