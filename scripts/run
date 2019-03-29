@@ -1,2 +1,7 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
+
+echo $(pwd)
+
+cd ..
+# docker-compose exec game_server ./run.sh
 
