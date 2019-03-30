@@ -3,5 +3,12 @@
 SCRIPT_NAME=$0
 DIR=$(dirname ${SCRIPT_NAME})
 
-docker-compose exec $1 bash
+# Use winpty
+PREFIX=
+which winpty > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+  PREFIX=winpty
+fi
+
+${PREFIX} docker-compose exec $1 bash
 
