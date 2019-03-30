@@ -10,5 +10,6 @@ if [ $? -eq 0 ]; then
   PREFIX=winpty
 fi
 
+cd ${DIR}/..
 ${PREFIX} docker-compose exec $1 bash
 
