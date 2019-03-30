@@ -22,8 +22,8 @@ services:
     build:
       context: ./tlbbdb
     image: tlbb/tlbbdb:latest
-    volumes:
-      - ${SHARED_DIR}/tlbbdb/mysql:/var/lib/mysql
+    # volumes:
+    #   - ${SHARED_DIR}/tlbbdb/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: "tlbb1234"
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
@@ -35,8 +35,8 @@ services:
     build:
       context: ./webdb
     image: tlbb/webdb:latest
-    volumes:
-      - ${SHARED_DIR}/webdb/mysql:/var/lib/mysql
+    # volumes:
+    #   - ${SHARED_DIR}/webdb/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: "tlbb1234"
       MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
