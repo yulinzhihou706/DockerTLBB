@@ -4,5 +4,5 @@ SCRIPT_NAME=$0
 DIR=$(dirname ${SCRIPT_NAME})
 
 cd ${DIR}/..
-winpty docker-compose exec game_server bash ./run.sh
+winpty docker-compose exec -d game_server bash ./run.sh
 

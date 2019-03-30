@@ -4,5 +4,5 @@ SCRIPT_NAME=$0
 DIR=$(dirname ${SCRIPT_NAME})
 
 cd ${DIR}/..
-docker-compose exec game_server ./run.sh
+docker-compose exec -d game_server ./run.sh
 
